@@ -2,56 +2,20 @@ import CreditCardContainer from '@/components/dashboard/creditCard'
 import { Etheme, TCreditCardProps } from '@/lib/types'
 import React from 'react'
 
-function page() {
+async function page() {
 
-    const cards: TCreditCardProps[] = [
-        {
-            cardNumber: '1234 5678 1234 5678',
-            holderName: 'John Doe',
-            validThru: '12/23',
-            balance: 1234.56
-        },
-        {
-            cardNumber: '1234 5678 1234 5678',
-            holderName: 'John Doe',
-            validThru: '12/23',
-            balance: 1234.56,
-            theme: Etheme.light
-        },
-        {
-            cardNumber: '1234 5678 1234 5678',
-            holderName: 'John Doe',
-            validThru: '12/23',
-            balance: 1234.56
-        },
-        {
-            cardNumber: '1234 5678 1234 5678',
-            holderName: 'John Doe',
-            validThru: '12/23',
-            balance: 1234.56,
-            theme: Etheme.light
-        },
-        {
-            cardNumber: '1234 5678 1234 5678',
-            holderName: 'John Doe',
-            validThru: '12/23',
-            balance: 1234.56
-        },
-        {
-            cardNumber: '1234 5678 1234 5678',
-            holderName: 'John Doe',
-            validThru: '12/23',
-            balance: 1234.56,
-            theme: Etheme.light
-        },
-    ]
+    const cards = await fetch('http://localhost:3000/mock/cards');
+
+    if (!cards.ok) throw new Error('Failed to fetch cards');
+
+    const data = await cards.json() as TCreditCardProps[];
 
 
     return (
         <div className='p-8'>
             <div className="responsiveGrid">
                 {
-                    cards.map((card, index) => (
+                    data.map((card, index) => (
                         <CreditCardContainer
                             key={index}
                             {...card}
