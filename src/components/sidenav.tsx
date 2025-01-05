@@ -2,7 +2,7 @@
 
 import { TSidebarNavItems } from '@/lib/types'
 import Image from 'next/image'
-import React from 'react'
+import React, { JSX } from 'react'
 import { House, ArrowLeftRight, UserRound, HandCoins, PiggyBank, CreditCard, PencilRuler, Lightbulb, Settings } from 'lucide-react';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -13,25 +13,25 @@ function SideNav() {
     const navigation: TSidebarNavItems[] = [
         { label: 'dashboard', href: '/' },
         { label: 'transactions', href: '#' },
-        { label: 'acconts', href: '#' },
+        { label: 'accounts', href: '#' },
         { label: 'investments', href: '#' },
         { label: 'credit cards', href: '#' },
         { label: 'loans', href: '#' },
         { label: 'services', href: '#' },
-        { label: 'my previleges', href: '#' },
+        { label: 'my privileges', href: '#' },
         { label: 'settings', href: '/settings' },
     ];
 
-    const iconsMap: any = {
-        dashboard: <House size={24} />,
-        transactions: <ArrowLeftRight size={24} />,
-        acconts: <UserRound size={24} />,
-        investments: <PiggyBank size={24} />,
+    const iconsMap: Record<string, JSX.Element> = {
+        'dashboard': <House size={24} />,
+        'transactions': <ArrowLeftRight size={24} />,
+        'accounts': <UserRound size={24} />,
+        'investments': <PiggyBank size={24} />,
         'credit cards': <CreditCard size={24} />,
-        loans: <HandCoins size={24} />,
-        services: <PencilRuler size={24} />,
-        'my previleges': <Lightbulb size={24} />,
-        settings: <Settings size={24} />,
+        'loans': <HandCoins size={24} />,
+        'services': <PencilRuler size={24} />,
+        'my privileges': <Lightbulb size={24} />,
+        'settings': <Settings size={24} />
     };
 
     const pathName = usePathname();

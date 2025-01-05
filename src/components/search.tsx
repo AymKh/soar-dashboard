@@ -1,6 +1,5 @@
 import React from 'react'
 import { Search } from 'lucide-react'
-import { clsx } from 'clsx'
 import { cn } from '@/lib/utils'
 
 function SearchBar({ className }: { className: string }) {

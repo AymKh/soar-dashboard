@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { JSX } from 'react'
 import { Button } from './ui/button'
 import { Bell, Settings } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
@@ -23,7 +23,7 @@ function TopNav() {
     /**
      * Used to map the icon name to the actual icon component
      */
-    const icons: any = {
+    const icons: Record<string, JSX.Element> = {
         Settings: <Settings className='!w-6 !h-6' />,
         Bell: <Bell className="!w-6 !h-6" />,
     }
