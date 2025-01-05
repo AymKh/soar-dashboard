@@ -1,3 +1,4 @@
+import CreditCardSection from "@/components/dashboard/creditCard";
 import CreditCardContainer from "@/components/dashboard/creditCard";
 import QuickTransfer from "@/components/dashboard/quickTransfer";
 import RecentTransactions from "@/components/dashboard/transactions";
@@ -6,40 +7,11 @@ import { Etheme, TCreditCardProps } from "@/lib/types";
 
 export default function Home() {
 
-  const cards: TCreditCardProps[] = [
-    {
-      cardNumber: '1234 5678 1234 5678',
-      holderName: 'John Doe',
-      validThru: '12/23',
-      balance: 1234.56
-    },
-    {
-      cardNumber: '1234 5678 1234 5678',
-      holderName: 'John Doe',
-      validThru: '12/23',
-      balance: 1234.56,
-      theme: Etheme.light
-    }
-  ]
-
   return (
     <div className="flex flex-col gap-8">
       <div className="p-8 grid grid-cols-custom-dashboard gap-8">
         <SectionContainer title='my cards' cta={{ label: 'see all', href: '/cards' }}>
-          <div className="grid-cols-credit-cards gap-4 grid overflow-x-scroll scroll-hidden">
-            {
-              cards.map((card, index) => (
-                <CreditCardContainer
-                  key={index}
-                  cardNumber={card.cardNumber}
-                  holderName={card.holderName}
-                  validThru={card.validThru}
-                  balance={card.balance}
-                  theme={card.theme}
-                />
-              ))
-            }
-          </div>
+          <CreditCardSection />
         </SectionContainer>
 
         <SectionContainer title='recent transactions' cta={{ label: '', href: '' }}>

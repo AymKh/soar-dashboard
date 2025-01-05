@@ -70,4 +70,41 @@ const CreditCardContainer = ({
     );
 };
 
-export default CreditCardContainer;
+const CreditCardSection = () => {
+
+    const cards: TCreditCardProps[] = [
+        {
+            cardNumber: '1234 5678 1234 5678',
+            holderName: 'John Doe',
+            validThru: '12/23',
+            balance: 1234.56
+        },
+        {
+            cardNumber: '1234 5678 1234 5678',
+            holderName: 'John Doe',
+            validThru: '12/23',
+            balance: 1234.56,
+            theme: Etheme.light
+        }
+    ]
+
+
+    return (
+        <div className="grid-cols-credit-cards gap-4 grid overflow-x-scroll scroll-hidden">
+            {
+                cards.map((card, index) => (
+                    <CreditCardContainer
+                        key={index}
+                        cardNumber={card.cardNumber}
+                        holderName={card.holderName}
+                        validThru={card.validThru}
+                        balance={card.balance}
+                        theme={card.theme}
+                    />
+                ))
+            }
+        </div>
+    );
+}
+
+export default CreditCardSection;
