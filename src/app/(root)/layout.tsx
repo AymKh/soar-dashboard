@@ -29,13 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} antialiased bg-secondary-100`}
       >
-        <main className="flex flex-row justify-start">
+        <main className="lg:flex lg:flex-row justify-start">
 
           <SideNav />
 
-          <section className="flex flex-col w-full bg-secondary-100">
+          <section className="flex flex-col w-full">
             <TopNav />
             {children}
           </section>
