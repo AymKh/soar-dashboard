@@ -2,7 +2,7 @@ import { Etheme, TCreditCardProps } from "@/lib/types"
 
 
 // THIS IS A MOCK FILE
-export const cards: TCreditCardProps[] = [
+const cards: TCreditCardProps[] = [
     {
         cardNumber: '1234 5678 1234 5678',
         holderName: 'John Doe',
