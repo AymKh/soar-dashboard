@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { inter } from "../../lib/fonts";
+import TopNav from "@/components/topnav";
+import SideNav from "@/components/sidenav";
 
 export const metadata: Metadata = {
   title: "Soar | Financial Freedom",
@@ -29,7 +31,16 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        {children}
+        <main className="flex flex-row justify-start">
+
+          <SideNav />
+
+          <section className="flex flex-col w-full bg-secondary-100">
+            <TopNav />
+            {children}
+          </section>
+
+        </main>
       </body>
     </html>
   );

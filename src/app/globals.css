@@ -8,3 +8,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --sidebar-width: 250px;
+  --topbar-height: 100px;
+}
