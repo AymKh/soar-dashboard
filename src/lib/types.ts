@@ -39,3 +39,10 @@ export type TTransactionItem = {
     amount: number;
     isPositive: boolean;
 }
+
+export type TUser = {
+    name: string;
+    role: string;
+    selected: boolean;
+    onClick: () => void;
+}

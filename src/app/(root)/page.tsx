@@ -1,7 +1,7 @@
 import CreditCardContainer from "@/components/dashboard/creditCard";
+import QuickTransfer from "@/components/dashboard/quickTransfer";
 import RecentTransactions from "@/components/dashboard/transactions";
 import SectionContainer from "@/components/sectionContainer";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Etheme, TCreditCardProps } from "@/lib/types";
 
 export default function Home() {
@@ -23,29 +23,37 @@ export default function Home() {
   ]
 
   return (
-    <div className="p-8 grid grid-cols-custom-dashboard gap-8">
+    <div className="flex flex-col gap-8">
+      <div className="p-8 grid grid-cols-custom-dashboard gap-8">
+        <SectionContainer title='my cards' cta={{ label: 'see all', href: '/cards' }}>
+          <div className="grid-cols-credit-cards gap-4 grid overflow-x-scroll scroll-hidden">
+            {
+              cards.map((card, index) => (
+                <CreditCardContainer
+                  key={index}
+                  cardNumber={card.cardNumber}
+                  holderName={card.holderName}
+                  validThru={card.validThru}
+                  balance={card.balance}
+                  theme={card.theme}
+                />
+              ))
+            }
+          </div>
+        </SectionContainer>
 
-      <SectionContainer title='my cards' cta={{ label: 'see all', href: '/cards' }}>
-        <div className="grid-cols-credit-cards gap-4 grid overflow-x-scroll scroll-hidden">
-          {
-            cards.map((card, index) => (
-              <CreditCardContainer
-                key={index}
-                cardNumber={card.cardNumber}
-                holderName={card.holderName}
-                validThru={card.validThru}
-                balance={card.balance}
-                theme={card.theme}
-              />
-            ))
-          }
-        </div>
-      </SectionContainer>
+        <SectionContainer title='recent transactions' cta={{ label: '', href: '' }}>
+          <RecentTransactions />
+        </SectionContainer>
+      </div>
 
+      <div className="p-8 grid grid-cols-custom-dashboard-transfers gap-8">
+        <SectionContainer title='quick transfer' cta={{ label: '', href: '' }}>
+          <QuickTransfer />
+        </SectionContainer>
 
-      <SectionContainer title='recent transactions' cta={{ label: '', href: '' }}>
-        <RecentTransactions />
-      </SectionContainer>
+        <div className="bg-yellow-400"></div>
+      </div>
     </div>
   );
 }

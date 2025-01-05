@@ -69,6 +69,7 @@ export default {
 			gridTemplateColumns: {
 				'custom-dashboard': 'repeat(auto-fit, minmax(450px, 1fr))',
 				'credit-cards': 'repeat(auto-fit, minmax(350px, 1fr))',
+				'custom-dashboard-transfers': '450px, 1fr',
 			}
 		}
 	},
