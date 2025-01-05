@@ -93,3 +93,12 @@
   background-color: black;
 
 }
+
+.scroll-hidden {
+  scrollbar-width: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  /* Safari and Chrome */
+  display: none;
+}

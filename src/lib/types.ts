@@ -9,3 +9,16 @@ export type TNavigationItems = {
 }
 
 export type TSidebarNavItems = Omit<TNavigationItems, 'icon'>;
+
+export enum Etheme {
+    light = 'light',
+    dark = 'dark'
+}
+
+export type TCreditCardProps = {
+    cardNumber: string;
+    holderName: string;
+    validThru: string;
+    balance?: number;
+    theme?: Etheme;
+}
