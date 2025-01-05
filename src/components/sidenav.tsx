@@ -15,7 +15,7 @@ function SideNav() {
         { label: 'transactions', href: '#' },
         { label: 'accounts', href: '#' },
         { label: 'investments', href: '#' },
-        { label: 'credit cards', href: '#' },
+        { label: 'credit cards', href: '/cards' },
         { label: 'loans', href: '#' },
         { label: 'services', href: '#' },
         { label: 'my privileges', href: '#' },
