@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 
 
-const CreditCardContainer = ({
+export const CreditCardContainer = ({
     cardNumber,
     holderName,
     validThru,

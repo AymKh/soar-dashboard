@@ -54,11 +54,7 @@ function page() {
                     cards.map((card, index) => (
                         <CreditCardContainer
                             key={index}
-                            cardNumber={card.cardNumber}
-                            holderName={card.holderName}
-                            validThru={card.validThru}
-                            balance={card.balance}
-                            theme={card.theme}
+                            {...card}
                         />
                     ))
                 }

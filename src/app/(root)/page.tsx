@@ -1,9 +1,7 @@
 import CreditCardSection from "@/components/dashboard/creditCard";
-import CreditCardContainer from "@/components/dashboard/creditCard";
 import QuickTransfer from "@/components/dashboard/quickTransfer";
 import RecentTransactions from "@/components/dashboard/transactions";
 import SectionContainer from "@/components/sectionContainer";
-import { Etheme, TCreditCardProps } from "@/lib/types";
 
 export default function Home() {
 
