@@ -1,5 +1,6 @@
+export const dynamic = 'force-dynamic'
 import { Etheme, TCreditCardProps } from "@/lib/types"
-
+import { NextResponse } from "next/server";
 
 // THIS IS A MOCK FILE
 const cards: TCreditCardProps[] = [
@@ -45,5 +46,5 @@ const cards: TCreditCardProps[] = [
 ]
 
 export async function GET() {
-    return Response.json(cards);
+    return NextResponse.json(cards);
 }
