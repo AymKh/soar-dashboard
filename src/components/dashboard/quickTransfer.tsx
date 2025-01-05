@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { Send, ChevronRight, ChevronLeft } from 'lucide-react';
 import { TUser } from '@/lib/types';
+import Image from 'next/image';
 
 const UserProfile = ({ name, role, selected, onClick }: TUser) => (
     <div
@@ -12,10 +13,11 @@ const UserProfile = ({ name, role, selected, onClick }: TUser) => (
     >
         <div className={`w-16 h-16 rounded-full overflow-hidden border-2 transition-colors ${selected ? 'border-blue-500' : 'border-transparent'
             }`}>
-            <img
-                src="https://i.pravatar.cc/300
-                "
+            <Image
+                src="https://avatars.githubusercontent.com/u/49798649"
                 alt={name}
+                width={64}
+                height={64}
                 className="w-full h-full object-cover"
             />
         </div>

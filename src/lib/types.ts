@@ -33,7 +33,7 @@ export type TCreditCardProps = {
 }
 
 export type TTransactionItem = {
-    icon: any;
+    icon: string;
     title: string;
     date: string;
     amount: number;
