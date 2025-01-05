@@ -7,3 +7,5 @@ export type TNavigationItems = {
     icon: string;
     href: string;
 }
+
+export type TSidebarNavItems = Omit<TNavigationItems, 'icon'>;
