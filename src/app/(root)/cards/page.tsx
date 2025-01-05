@@ -1,5 +1,5 @@
 import CreditCardContainer from '@/components/dashboard/creditCard'
-import { Etheme, TCreditCardProps } from '@/lib/types'
+import { TCreditCardProps } from '@/lib/types'
 import React from 'react'
 
 async function page() {

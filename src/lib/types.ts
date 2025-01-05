@@ -2,6 +2,8 @@
  * @fileoverview Types definition for the library.
  */
 
+import { LucideIcon } from "lucide-react";
+
 export type TNavigationItems = {
     label: string;
     icon: string;
@@ -33,7 +35,7 @@ export type TCreditCardProps = {
 }
 
 export type TTransactionItem = {
-    icon: any;
+    icon: LucideIcon;
     title: string;
     date: string;
     amount: number;
