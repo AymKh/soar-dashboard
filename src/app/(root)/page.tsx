@@ -1,4 +1,5 @@
 import CreditCardContainer from "@/components/dashboard/creditCard";
+import RecentTransactions from "@/components/dashboard/transactions";
 import SectionContainer from "@/components/sectionContainer";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Etheme, TCreditCardProps } from "@/lib/types";
@@ -41,7 +42,10 @@ export default function Home() {
         </div>
       </SectionContainer>
 
-      <div className="bg-yellow-200"></div>
+
+      <SectionContainer title='recent transactions' cta={{ label: '', href: '' }}>
+        <RecentTransactions />
+      </SectionContainer>
     </div>
   );
 }

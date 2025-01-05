@@ -31,3 +31,11 @@ export type TCreditCardProps = {
     balance?: number;
     theme?: Etheme;
 }
+
+export type TTransactionItem = {
+    icon: any;
+    title: string;
+    date: string;
+    amount: number;
+    isPositive: boolean;
+}
