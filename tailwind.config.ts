@@ -66,6 +66,10 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			gridTemplateColumns: {
+				'custom-dashboard': 'repeat(auto-fit, minmax(450px, 1fr))',
+				'credit-cards': 'repeat(auto-fit, minmax(350px, 1fr))',
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

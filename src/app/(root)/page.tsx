@@ -22,28 +22,26 @@ export default function Home() {
   ]
 
   return (
-    <div className="p-8">
+    <div className="p-8 grid grid-cols-custom-dashboard gap-8">
 
       <SectionContainer title='my cards' cta={{ label: 'see all', href: '/cards' }}>
-
-        <ScrollArea className="w-[700px] whitespace-nowrap ">
-          <div className=" gap-4 grid grid-flow-col max-w-[700px] overflow-x-scroll scroll-hidden">
-
-            {
-              cards.map((card, index) => (
-                <CreditCardContainer
-                  key={index}
-                  cardNumber={card.cardNumber}
-                  holderName={card.holderName}
-                  validThru={card.validThru}
-                  balance={card.balance}
-                  theme={card.theme}
-                />
-              ))
-            }
-          </div>
-        </ScrollArea>
+        <div className="grid-cols-credit-cards gap-4 grid overflow-x-scroll scroll-hidden">
+          {
+            cards.map((card, index) => (
+              <CreditCardContainer
+                key={index}
+                cardNumber={card.cardNumber}
+                holderName={card.holderName}
+                validThru={card.validThru}
+                balance={card.balance}
+                theme={card.theme}
+              />
+            ))
+          }
+        </div>
       </SectionContainer>
+
+      <div className="bg-yellow-200"></div>
     </div>
   );
 }

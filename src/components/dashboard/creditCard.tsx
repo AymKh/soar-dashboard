@@ -27,7 +27,7 @@ const CreditCardContainer = ({
     };
 
     return (
-        <div className={`w-[350px] h-[235px] rounded-xl relative flex flex-col gap-2 ${theme === 'dark'
+        <div className={`w-full h-[235px] rounded-xl relative flex flex-col gap-2 ${theme === 'dark'
             ? 'bg-gradient-to-br from-[#5B5A6F] to-black text-white'
             : 'bg-white border-secondary-200 text-gray-800'
             }`}>
