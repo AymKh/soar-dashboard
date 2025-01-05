@@ -1,11 +1,11 @@
 import CreditCardContainer from "@/components/dashboard/creditCard";
 import SectionContainer from "@/components/sectionContainer";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Etheme } from "@/lib/types";
+import { Etheme, TCreditCardProps } from "@/lib/types";
 
 export default function Home() {
 
-  const cards = [
+  const cards: TCreditCardProps[] = [
     {
       cardNumber: '1234 5678 1234 5678',
       holderName: 'John Doe',
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="p-8">
 
-      <SectionContainer title='my cards'>
+      <SectionContainer title='my cards' cta={{ label: 'see all', href: '/cards' }}>
 
         <ScrollArea className="w-[700px] whitespace-nowrap ">
           <div className=" gap-4 grid grid-flow-col max-w-[700px] overflow-x-scroll scroll-hidden">

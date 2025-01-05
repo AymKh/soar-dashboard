@@ -10,6 +10,15 @@ export type TNavigationItems = {
 
 export type TSidebarNavItems = Omit<TNavigationItems, 'icon'>;
 
+export type TSectionContainerProps = {
+    children: React.ReactNode;
+    title: string;
+    cta: {
+        label: string;
+        href: string;
+    }
+}
+
 export enum Etheme {
     light = 'light',
     dark = 'dark'
